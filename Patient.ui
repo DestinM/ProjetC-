@@ -62,7 +62,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
 </string>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab">
          <property name="styleSheet">
@@ -433,6 +433,16 @@ background: rgb(111, 255, 152);
            </rect>
           </property>
          </widget>
+         <widget class="QTableView" name="tableList">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>61</y>
+            <width>761</width>
+            <height>301</height>
+           </rect>
+          </property>
+         </widget>
         </widget>
         <widget class="QWidget" name="tab_3">
          <attribute name="title">
@@ -464,7 +474,7 @@ background: rgb(111, 255, 152);
            <string>Date de rendez-vous :</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="code_2">
+         <widget class="QLineEdit" name="code_patient">
           <property name="geometry">
            <rect>
             <x>90</x>
@@ -474,7 +484,7 @@ background: rgb(111, 255, 152);
            </rect>
           </property>
          </widget>
-         <widget class="QDateEdit" name="date">
+         <widget class="QDateEdit" name="date_rendez_vous">
           <property name="geometry">
            <rect>
             <x>580</x>
@@ -508,7 +518,7 @@ background: rgb(111, 255, 152);
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_3">
+            <widget class="QPushButton" name="save">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -552,6 +562,23 @@ background: rgb(111, 255, 152);
             </spacer>
            </item>
           </layout>
+         </widget>
+         <widget class="QLabel" name="msg">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>100</y>
+            <width>121</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:rgb(237, 255, 240);
+color: rgb(193, 125, 17);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
          </widget>
         </widget>
         <widget class="QWidget" name="widget">

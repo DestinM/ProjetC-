@@ -40,7 +40,7 @@ void login::Action(){
     }
     if(verification.setting() == 'F'){
 
-        ui->msg->setText("mauvais identifiant");
+        ui->message->setText("mauvais identifiant");
     }
 
 }

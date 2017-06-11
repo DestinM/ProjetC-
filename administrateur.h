@@ -18,6 +18,7 @@ public:
     ~Administrateur();
 public slots:
     void Action();
+    void changePassword();
 
 private:
     Ui::Administrateur *ui;
@@ -32,6 +33,8 @@ private:
     QString email;
     QString username;
     QString password;
+
+
 };
 
 

@@ -280,6 +280,9 @@ border-radius: 8px;
              <property name="styleSheet">
               <string notr="true"/>
              </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
             </widget>
            </item>
           </layout>
@@ -325,7 +328,7 @@ border-radius: 3px;
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="msg">
+          <widget class="QLabel" name="message">
            <property name="styleSheet">
             <string notr="true">color: rgb(239, 41, 41);
 background-color: rgb(21, 49, 60);</string>

@@ -19,6 +19,7 @@ public:
     ~Patient();
 public slots:
     void Action();
+    void Action_rdv();
 
 
 private:
@@ -32,6 +33,10 @@ private:
     QDateTime dateNaissance;
     QString maladie;
     QString commentaire;
+
+
+    QDateTime rendez_vous_date;
+    QString code_patient;
 };
 
 #endif // PATIENT_H

@@ -2,6 +2,13 @@
 #include "ui_Patient.h"
 #include <QDebug>
 #include <QSqlQuery>
+#include <rendez_vous.h>
+#include<QMessageBox>
+#include <QObject>
+#include <QSqlQueryModel>
+#include <QSqlRecord>
+#include <QTableView>
+#include <QStandardItemModel>
 
 Patient::Patient(QWidget *parent) :
     QMainWindow(parent),
@@ -9,12 +16,39 @@ Patient::Patient(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->savePatient,SIGNAL(clicked()),this,SLOT(Action()));
+    connect(ui->save,SIGNAL(clicked()),this,SLOT(Action_rdv()));
 
 
        //sexe
        ui->sexe->addItem("--none--");
        ui->sexe->addItem("masculin");
        ui->sexe->addItem("feminin");
+
+       //table
+       QSqlQueryModel *model = new QSqlQueryModel;
+
+               model->setQuery("SELECT * FROM patient");
+
+       //        for (int i = 0; i < model.rowCount(); ++i) {
+       //            int id = model.record(i).value("id").toInt();
+       //            QString name = model.record(i).value("name").toString();
+       //            qDebug() << id << name;
+       //        }
+
+       //        model.setData(model.index(row, column), 75000);
+       //        model.submitAll();
+
+
+
+                //model->setHorizontalHeaderLabels(columnNames);
+
+
+
+
+
+               qDebug() << model->rowCount();
+
+               ui->tableList->setModel(model);
 
 
 }
@@ -39,6 +73,10 @@ void Patient::Action(){
     adresse = ui->adresse->text();
     maladie = ui->maladie->text();
     commentaire = ui->commentaire->text();
+
+
+    //rendez vous
+    rendez_vous_date = ui->date_rendez_vous->dateTime();
 
     //verification
 
@@ -75,6 +113,18 @@ void Patient::Action(){
 
 
 
-   // qDebug() << code;
+}
+
+void Patient::Action_rdv(){
+    //rendez vous
+    rendez_vous rdv(code_patient,rendez_vous_date);
+    qDebug() << rendez_vous_date;
+    if(rdv.setting()){
+        ui->msg->setText("success");
+
+    }
+    else{
+         ui->msg->setText("echec");
+    }
 }
 
