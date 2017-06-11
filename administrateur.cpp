@@ -8,7 +8,6 @@ Administrateur::Administrateur(QWidget *parent) :
     ui(new Ui::Administrateur)
 {
     ui->setupUi(this);
-    qDebug("entree reussie");
     connect(ui->saveAgentButton,SIGNAL(clicked()),this,SLOT(Action()));
 
 

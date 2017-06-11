@@ -28,17 +28,17 @@ SOURCES += main.cpp\
     login.cpp \
     connexion.cpp \
     verify.cpp \
-    inscrire_agent.cpp \
     patient.cpp \
-    administrateur.cpp
+    administrateur.cpp \
+    rendez_vous.cpp
 
 HEADERS  += \
     login.h \
     connexion.h \
     verify.h \
-    inscrire_agent.h \
     patient.h \
-    administrateur.h
+    administrateur.h \
+    rendez_vous.h
 
 FORMS += \
     login.ui \

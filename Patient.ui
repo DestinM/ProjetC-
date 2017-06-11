@@ -55,6 +55,7 @@ stop:1 rgba(32, 80, 96, 100));</string>
        <widget class="QTabWidget" name="Tab_widget">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(237, 255, 240);
+color: rgb(0, 0, 0);
 font: 75 12pt &quot;Times New Roman&quot;;
 
 
@@ -174,7 +175,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
            <string>Commentaire :</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="code">
           <property name="geometry">
            <rect>
             <x>120</x>
@@ -184,7 +185,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_2">
+         <widget class="QLineEdit" name="nom">
           <property name="geometry">
            <rect>
             <x>120</x>
@@ -194,7 +195,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_3">
+         <widget class="QLineEdit" name="prenom">
           <property name="geometry">
            <rect>
             <x>120</x>
@@ -204,7 +205,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_5">
+         <widget class="QLineEdit" name="adresse">
           <property name="geometry">
            <rect>
             <x>560</x>
@@ -214,7 +215,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_6">
+         <widget class="QLineEdit" name="telephone">
           <property name="geometry">
            <rect>
             <x>560</x>
@@ -224,7 +225,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_7">
+         <widget class="QLineEdit" name="maladie">
           <property name="geometry">
            <rect>
             <x>560</x>
@@ -234,7 +235,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_8">
+         <widget class="QLineEdit" name="commentaire">
           <property name="geometry">
            <rect>
             <x>560</x>
@@ -244,7 +245,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
            </rect>
           </property>
          </widget>
-         <widget class="QComboBox" name="comboBox">
+         <widget class="QComboBox" name="sexe">
           <property name="geometry">
            <rect>
             <x>120</x>
@@ -258,7 +259,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>250</y>
+            <y>310</y>
             <width>771</width>
             <height>61</height>
            </rect>
@@ -278,7 +279,7 @@ font: 75 12pt &quot;Times New Roman&quot;;
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="savePatient">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -322,6 +323,52 @@ background: rgb(111, 255, 152);
             </spacer>
            </item>
           </layout>
+         </widget>
+         <widget class="QLabel" name="label_31">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>230</y>
+            <width>121</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Date de naissance :</string>
+          </property>
+         </widget>
+         <widget class="QDateEdit" name="dateNaissance">
+          <property name="geometry">
+           <rect>
+            <x>179</x>
+            <y>230</y>
+            <width>101</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QDateEdit" name="dateEdit_3">
+          <property name="geometry">
+           <rect>
+            <x>610</x>
+            <y>230</y>
+            <width>111</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_32">
+          <property name="geometry">
+           <rect>
+            <x>440</x>
+            <y>230</y>
+            <width>161</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Date d'enregistrement :</string>
+          </property>
          </widget>
         </widget>
         <widget class="QWidget" name="tab_2">
@@ -404,50 +451,11 @@ background: rgb(111, 255, 152);
            <string>Code :</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_11">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>90</y>
-            <width>121</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Nom :</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_12">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>140</y>
-            <width>121</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Prénom :</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_13">
-          <property name="geometry">
-           <rect>
-            <x>410</x>
-            <y>140</y>
-            <width>121</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Mention :</string>
-          </property>
-         </widget>
          <widget class="QLabel" name="label_14">
           <property name="geometry">
            <rect>
             <x>410</x>
-            <y>90</y>
+            <y>30</y>
             <width>131</width>
             <height>31</height>
            </rect>
@@ -456,20 +464,7 @@ background: rgb(111, 255, 152);
            <string>Date de rendez-vous :</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_15">
-          <property name="geometry">
-           <rect>
-            <x>410</x>
-            <y>30</y>
-            <width>121</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Telephone :</string>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="lineEdit_9">
+         <widget class="QLineEdit" name="code_2">
           <property name="geometry">
            <rect>
             <x>90</x>
@@ -479,51 +474,11 @@ background: rgb(111, 255, 152);
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_10">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>90</y>
-            <width>191</width>
-            <height>31</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="lineEdit_11">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>140</y>
-            <width>191</width>
-            <height>31</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="lineEdit_12">
-          <property name="geometry">
-           <rect>
-            <x>500</x>
-            <y>30</y>
-            <width>191</width>
-            <height>31</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="lineEdit_14">
-          <property name="geometry">
-           <rect>
-            <x>500</x>
-            <y>140</y>
-            <width>191</width>
-            <height>31</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QDateEdit" name="dateEdit">
+         <widget class="QDateEdit" name="date">
           <property name="geometry">
            <rect>
             <x>580</x>
-            <y>90</y>
+            <y>30</y>
             <width>110</width>
             <height>31</height>
            </rect>
@@ -533,7 +488,7 @@ background: rgb(111, 255, 152);
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>210</y>
+            <y>160</y>
             <width>771</width>
             <height>42</height>
            </rect>

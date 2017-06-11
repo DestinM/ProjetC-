@@ -1,5 +1,5 @@
 #include "patient.h"
-#include "administrator.h"
+#include "administrateur.h"
 #include "login.h"
 #include <QApplication>
 
