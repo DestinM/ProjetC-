@@ -19,7 +19,7 @@ public:
     ~Patient();
 public slots:
     void Action();
-    void Action_rdv();
+    void changePassword();
 
 
 private:
@@ -37,6 +37,8 @@ private:
 
     QDateTime rendez_vous_date;
     QString code_patient;
+    QString password;
+
 };
 
 #endif // PATIENT_H

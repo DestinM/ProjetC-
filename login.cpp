@@ -30,12 +30,14 @@ void login::Action(){
 
         this->hide();
         Administrateur *adminpage= new Administrateur;
+         adminpage->setFixedSize(800,600);
         adminpage->show();
     }
     if(verification.setting() == 'U'){
 
         this->hide();
         Patient *patient= new Patient;
+         patient->setFixedSize(800,600);
         patient->show();
     }
     if(verification.setting() == 'F'){

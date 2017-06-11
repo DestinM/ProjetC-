@@ -24,5 +24,6 @@ private:
     Ui::MainWindow *ui;
     QString username;
     QString password;
+
 };
 #endif // LOGIN_H

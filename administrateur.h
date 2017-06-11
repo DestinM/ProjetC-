@@ -15,6 +15,7 @@ class Administrateur : public QMainWindow
 
 public:
     explicit Administrateur(QWidget *parent = 0);
+    void rdv();
     ~Administrateur();
 public slots:
     void Action();
@@ -33,6 +34,8 @@ private:
     QString email;
     QString username;
     QString password;
+
+
 
 
 };

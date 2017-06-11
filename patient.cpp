@@ -2,7 +2,6 @@
 #include "ui_Patient.h"
 #include <QDebug>
 #include <QSqlQuery>
-#include <rendez_vous.h>
 #include<QMessageBox>
 #include <QObject>
 #include <QSqlQueryModel>
@@ -16,7 +15,7 @@ Patient::Patient(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->savePatient,SIGNAL(clicked()),this,SLOT(Action()));
-    connect(ui->save,SIGNAL(clicked()),this,SLOT(Action_rdv()));
+    connect(ui->changePasswordButton,SIGNAL(clicked()),this,SLOT(changePassword()));
 
 
        //sexe
@@ -75,15 +74,13 @@ void Patient::Action(){
     commentaire = ui->commentaire->text();
 
 
-    //rendez vous
-    rendez_vous_date = ui->date_rendez_vous->dateTime();
+
 
     //verification
 
     //insertion apres verification
     if(true){
-        //requette d'insertion
-        bool result;
+
         query.prepare("insert into patient (code, Nom, Prenom, Sexe,Adresse, Telephone,Maladie,Commentaires ,Date_naissance) values(?, ?, ?, ?, ?, ?, ?, ?, ?) ");
 
         query.addBindValue(code);
@@ -112,19 +109,46 @@ void Patient::Action(){
     }
 
 
-
 }
 
-void Patient::Action_rdv(){
-    //rendez vous
-    rendez_vous rdv(code_patient,rendez_vous_date);
-    qDebug() << rendez_vous_date;
-    if(rdv.setting()){
-        ui->msg->setText("success");
+void Patient::changePassword(){
+    QSqlQuery query;
+
+
+    //les contenues des champs
+    password = ui->newpassword->text();
+
+    //verification
+
+    //insertion apres verification
+    if(true){
+        query.prepare("update agent_medicales set password=?");
+
+        query.addBindValue(password);
+
+        if(query.exec() ) {
+            ui->mymsg->setText("reussie");
+
+            qDebug() << "modification reussie";
+        } else {
+
+            qDebug() << "modification echoued";
+        }
 
     }
     else{
-         ui->msg->setText("echec");
+
     }
+
+
+
+
+   // qDebug() << code;
 }
+
+
+
+
+
+
 

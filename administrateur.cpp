@@ -116,22 +116,23 @@ void Administrateur::changePassword(){
 
     //insertion apres verification
     if(true){
-        //requette d'insertion
-        bool result;
         query.prepare("update agent_medicales set password=?");
 
         query.addBindValue(password);
 
         if(query.exec() ) {
+            ui->mymsg->setText("reussie");
             qDebug() << "modification reussie";
         } else {
             qDebug() << "modification echoued";
         }
 
+
     }
     else{
 
     }
+
 
 
 

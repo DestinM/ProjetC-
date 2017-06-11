@@ -29,16 +29,14 @@ SOURCES += main.cpp\
     connexion.cpp \
     verify.cpp \
     patient.cpp \
-    administrateur.cpp \
-    rendez_vous.cpp
+    administrateur.cpp
 
 HEADERS  += \
     login.h \
     connexion.h \
     verify.h \
     patient.h \
-    administrateur.h \
-    rendez_vous.h
+    administrateur.h
 
 FORMS += \
     login.ui \
