@@ -6,7 +6,7 @@ class verify
 {
 public:
     verify(QString &,QString &);
-    bool setting();
+    char setting();
 private:
     QString username;
     QString password;

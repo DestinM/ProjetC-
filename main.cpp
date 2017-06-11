@@ -1,5 +1,4 @@
-#include "mainwindow.h"
-#include "admin.h"
+#include "patient.h"
 #include "administrator.h"
 #include "login.h"
 #include <QApplication>

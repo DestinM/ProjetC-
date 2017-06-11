@@ -27,17 +27,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp\
     login.cpp \
     connexion.cpp \
-    administrator.cpp \
     verify.cpp \
-    inscrire_agent.cpp
+    inscrire_agent.cpp \
+    patient.cpp \
+    administrateur.cpp
 
 HEADERS  += \
     login.h \
     connexion.h \
-    administrator.h \
     verify.h \
-    inscrire_agent.h
+    inscrire_agent.h \
+    patient.h \
+    administrateur.h
 
 FORMS += \
-    administrator.ui \
-    login.ui
+    login.ui \
+    Patient.ui \
+    administrateur.ui

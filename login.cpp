@@ -2,7 +2,8 @@
 #include "ui_login.h"
 #include "connexion.h"
 #include "verify.h"
-#include "administrator.h"
+#include "patient.h"
+#include "administrateur.h"
 
 
 login::login(QWidget *parent) :
@@ -25,14 +26,21 @@ void login::Action(){
     username=ui->username->text();
     password=ui->password->text();
     verify verification(username,password);
-    if(verification.setting()){
+    if(verification.setting() == 'A'){
 
         this->hide();
-        Administrator *adminpage= new Administrator;
+        Administrateur *adminpage= new Administrateur;
         adminpage->show();
     }
-    else{
-        ui->msg->setText("wrong password");
+    if(verification.setting() == 'U'){
+
+        this->hide();
+        Patient *patient= new Patient;
+        patient->show();
+    }
+    if(verification.setting() == 'F'){
+
+        ui->msg->setText("mauvais identifiant");
     }
 
 }
